@@ -1,8 +1,6 @@
 import React from 'react'
 
 export default function DropDown({changeCurrency}) {
-
-
   return (
     <div className="dropdown">
       <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

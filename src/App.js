@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Chart from "./components/Chart";
 import DropDown from "./components/DropDown";
 
-
-
 function App() {
 
   const [bestBid, setBestBid] = useState([{price: null, size: null}]);
@@ -34,7 +32,7 @@ function App() {
       if(json.type === 'l2update' && json.product_id === currency){
         const changes = json.changes[0][0];
         const newInfo = {price: json.changes[0][1], size: json.changes[0][2]};
-        console.log(json)
+        
         if(changes === 'buy'){
           setBestBid(prevState => [...prevState, newInfo]);
         }
